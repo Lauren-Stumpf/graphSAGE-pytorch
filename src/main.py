@@ -54,7 +54,7 @@ if __name__ == '__main__':
 	graphSage = GraphSage(config['setting.num_layers'], features.size(1), config['setting.hidden_emb_size'], features, getattr(dataCenter, ds+'_adj_lists'), device, gcn=args.gcn, agg_func=args.agg_func)
 	graphSage.to(device)
 
-	num_labels = len(set(getattr(dataCenter, ds+'_labels')))
+	num_labels = features.shape[1]
 	classification = Classification(config['setting.hidden_emb_size'], num_labels)
 	classification.to(device)
 
