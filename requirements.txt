@@ -5,6 +5,6 @@ pyparsing
 scikit-learn
 scipy
 six
-sklearn
+scikit-learn
 torch
 torchvision
